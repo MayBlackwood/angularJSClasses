@@ -8,6 +8,24 @@
     <script src="./app.js"></script>
     <title>AngularJs App</title>
   </head>
-  <body ng-app="App">
+  <body ng-app="LunchCheck">
+    <div class="container" ng-controller="LunchCheckController">
+      <h1>Lunch Checker</h1>
+          <div class="form-group">
+              <input 
+                id="lunch-menu" 
+                type="text"
+                placeholder="list comma separated dishes you usually have for lunch"
+                class="form-control"
+                ng-model="listOfDishes"
+              >
+          </div>
+          <div class="form-group">
+              <button class="btn btn-default" ng-click="checkAmountOfDishes(listOfDishes)">Check If Too Much</button>
+          </div>
+          <h2 class="form-group message">
+            {{ message }}
+          </h2>
+    </div>
   </body>
 </html>

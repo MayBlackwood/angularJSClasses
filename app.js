@@ -4,7 +4,9 @@
   var app = angular.module('LunchCheck', []);
   app.controller('LunchCheckController', LunchCheckController);
 
-  function LunchCheckController($scope, $filter) {
+  LunchCheckController.$inject=['$scope'];
+
+  function LunchCheckController($scope) {
     $scope.listOfDishes = '';
     $scope.message;
 
